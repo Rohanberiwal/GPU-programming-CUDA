@@ -1,0 +1,37 @@
+Level of Detail (LOD) 
+LOD techniques are methods used in computer graphics to manage and optimize the level of detail displayed in a scene, particularly for 3D models or terrains. 
+The basic idea is to adjust the complexity or detail of objects based on factors such as their distance from the viewer.
+The goal is to allocate computational resources more efficiently, improving rendering performance while maintaining a visually pleasing and realistic representation.
+Some of the example are  :
+
+Distance-based Detail:
+Objects or terrain features that are closer to the viewer are rendered with more detail.
+Objects or terrain features that are farther away are rendered with less detail.
+
+Benefits of LOD Techniques:
+
+Performance Optimization: Rendering highly detailed models or terrains can be computationally expensive. 
+By reducing detail for distant objects, LOD techniques help maintain a smooth and responsive frame rate.
+
+Memory Efficiency: Storing and processing detailed geometry for the entire scene can be memory-intensive.
+LOD allows for more efficient memory usage by loading and rendering only the necessary level of detail based on the viewer's perspective.
+Types of LOD Techniques:
+
+
+Geometric LOD: Involves changing the geometric representation of an object based on its distance. 
+For example, using simpler 3D models or reducing the number of polygons in a model for distant views.
+
+
+Texture LOD: Adjusts the level of detail in textures based on the viewer's distance. Distant objects might use lower-resolution textures to save memory and
+improve rendering performance.
+
+Mipmapping: A specific form of texture LOD where precomputed texture maps at different resolutions (mipmaps) are used based on the distance from the viewer.
+
+Terrain LOD:
+In the context of terrain rendering, LOD techniques are often crucial. For example, in geomipmapping, the terrain is divided into patches, 
+and the level of detail of each patch is dynamically adjusted based on the viewer's position.
+High-resolution terrain geometry is used for areas close to the viewer, while lower resolutions are used for more distant terrain.
+
+Dynamic LOD:
+LOD techniques can be dynamic, meaning they can adapt in real-time as the viewer moves through the scene.
+This adaptability ensures that the most appropriate level of detail is used for each object based on the viewer's perspective.
