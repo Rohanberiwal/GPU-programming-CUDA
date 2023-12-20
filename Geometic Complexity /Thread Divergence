@@ -1,0 +1,29 @@
+hread divergence refers to a situation in parallel computing, particularly in the context of SIMD (Single Instruction, Multiple Data) 
+or SIMT (Single Instruction, Multiple Thread) architectures, where threads deviate from executing the same instruction at the same time.
+In simpler terms, within a group of parallel threads, some threads take a different execution path than others.
+A warp is a unit of execution that consists of a fixed number of threads (e.g., 32 threads per warp in many NVIDIA architectures). 
+All threads within a warp execute the same instruction simultaneously, which is a fundamental principle of SIMD.
+Threads within a warp might encounter conditional statements (like if-else branches) where some threads take one branch
+and others take a different branch. When this happens, the threads within the warp are said to diverge. 
+Thread divergence can lead to performance inefficiencies because the GPU must handle the divergent threads by executing each branch separately
+serializing the processing within the warp.
+
+Thread divergence can have performance implications because, in SIMD architectures like GPUs, all threads in a warp execute the same instruction at the same time.
+If threads within a warp diverge, the GPU must serialize the execution, potentially leading to decreased throughput and performance.
+Avoiding conditional branches that lead to divergence and finding ways to make the execution paths more uniform within a warp are common strategies.
+//pseudo code taken from chatgpt in cuda language , illustrates the thread divergence  :
+
+//main.cuda
+__global__ void exampleKernel(int* data) {
+    int tid = blockIdx.x * blockDim.x + threadIdx.x;
+    
+    if (data[tid] > 0) {
+        // Code executed by threads where data[tid] > 0
+        data[tid] = data[tid] * 2;
+    } else {
+        // Code executed by threads where data[tid] <= 0
+        data[tid] = -data[tid];
+    }
+}
+
+The above code shows the thread diveragence example using the cuda lib .
