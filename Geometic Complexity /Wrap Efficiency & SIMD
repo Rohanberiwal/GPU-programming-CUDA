@@ -1,5 +1,5 @@
 Warp Efficiency:
-//
+/
 Warp efficiency is a measure of how effectively a GPU's SIMD architecture is utilized.
 It is closely related to thread divergence.
 The efficiency of a warp is determined by how many threads within the wrap or the thread pool are actively executing and how well they stay in sync. 
