@@ -1,5 +1,8 @@
 Voxels
 Voxels short for volumetric pixels, are three-dimensional (3D) pixels that represent a point in space within a 3D grid.
+Voxels are used to represent volumetric data. In the context of GPUs, voxels can be employed to model 3D spaces, providing a way to 
+represent solid structures and complex scenes. Voxels are often used in applications such as medical imaging, computer-aided design (CAD),
+and simulations.
 Unlike traditional pixels in 2D images, which have two dimensions (width and height), voxels add a third dimension (depth).
 Essentially, a voxel is the 3D counterpart of a 2D pixel.
 In a 3D space, a voxel contains information about a specific point in the volume, such as color, opacity, 
