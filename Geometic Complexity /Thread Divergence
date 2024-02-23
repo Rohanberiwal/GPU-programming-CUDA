@@ -1,4 +1,4 @@
-hread divergence refers to a situation in parallel computing, particularly in the context of SIMD (Single Instruction, Multiple Data) 
+Thread divergence refers to a situation in parallel computing, particularly in the context of SIMD (Single Instruction, Multiple Data) 
 or SIMT (Single Instruction, Multiple Thread) architectures, where threads deviate from executing the same instruction at the same time.
 In simpler terms, within a group of parallel threads, some threads take a different execution path than others.
 A warp is a unit of execution that consists of a fixed number of threads (e.g., 32 threads per warp in many NVIDIA architectures). 
