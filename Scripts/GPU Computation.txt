@@ -1,0 +1,54 @@
+GPU Computation 
+Single Processor Performance was improved due to the clock and the architectural improvements mainly in the fields of the pipeline  , instruction level parallelism . 
+Clock frequency is measured in the terms of the Hertz .  
+
+Automatic Performance Improvement  is the improvement in the tech so as to  increase the computation limit and the performance of the system .  
+It covers :
+
+1.Complier optimisation 
+2.Driver level optimisation 
+3,Hardware accelerated Lib 
+4. Runtime profiling and tuning 
+5.Dynamic parallelism 
+
+Better clock frequency -> increases the power composition that lead to the hit of the power wall and No more computation power increase was possible after that  .
+Heat dissipation lead to a lot of power and this is surely a big overheads .
+
+How to increase   the clock speed ?
+Improve the quantity of the transistor in system .-> Moore law 
+Improve the number of the cores in the CPU .
+
+Terms :
+1.Flop : floating point operation per sec  .
+2 Kilo flop - > 10 **3 floating point operation per sec .  
+Collection of the sever is called Clusters .
+
+
+Many code in the Sf uses the Flop  so these are the typical operation  that the Gpu severs supports . 
+
+2. Shared mem systems(multi cores)  :
+hardware with the multiple cores nd these shares the same memory , which can be the virtual , local , or the simple primary one . This is the called as the shared memory  . 
+
+3. distributed Clusters -> these are the system with distributed clusters , there  would eb different memory for the different servers and the clusters .Used in the clouds  .
+
+
+4.Graphsic processing units(GPUS)-> many cores unit use to do the graphic rendering  . These are not the house alone stuff , but these are housed inside the machine with the cpu / in the CPU . These are used in the Synchronisation with the CPU . 
+
+GPU AND THE CPU ARE CONNECTE TOFGERTHER USING THE INTERCONNECT CALLEDAS THE bus .GPU HAS ITS own RAM .  
+
+
+Accelerators -> gpu   is one of the biggest accelerators used to accelerate the other accelerators .
+ 
+Example - >
+difference  in the  FPGA  and the ASCI 
+
+Design Flexibility:
+
+FPGAs: FPGAs offer high design flexibility and configurability. Users can program and reconfigure FPGAs after manufacturing to implement different digital circuits and functionalities. This flexibility makes FPGAs suitable for rapid prototyping, development, and applications requiring frequent updates or customization.
+ASICs: ASICs are designed for specific tasks during manufacturing and cannot be reconfigured after production. ASIC designs are optimized for a particular application, resulting in high performance and efficiency for that specific task but limited flexibility for modifications or updates.
+
+
+Performance:
+
+FPGAs: FPGAs typically offer lower performance compared to ASICs for specific tasks due to the overhead associated with reconfigurability and general-purpose routing resources. However, FPGAs can achieve high performance for certain applications, especially those benefiting from parallel processing and hardware acceleration.
+ASICs: ASICs are optimized for performance and can achieve higher speeds and lower power consumption compared to FPGAs for the same task. ASIC designs are tailored to meet specific performance requirements, resulting in optimized hardware implementations.
