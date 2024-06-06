@@ -1,5 +1,6 @@
 # Kernel Fusion
 
+
 Kernel fusion is a technique used in GPU programming to improve performance by combining multiple kernel functions into a single kernel. A kernel function in this context refers to a function that runs in parallel on individual threads of a GPU.
 
 ## Why Kernel Fusion?
