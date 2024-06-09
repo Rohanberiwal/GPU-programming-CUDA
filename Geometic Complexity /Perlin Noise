@@ -2,6 +2,7 @@ Perlin noise
 Perlin noise has a smooth, continuous appearance and is often employed to generate terrain, textures, and other procedural content in computer graphics. 
 The key features of Perlin noise include:
 Gradient Noise
+
 Perlin noise is a type of gradient noise, which means it uses gradients (vectors representing the rate of change of a value) to create its randomness. 
 The gradients are assigned to each lattice point in a grid, and the values at other points are interpolated based on these gradients.
 
